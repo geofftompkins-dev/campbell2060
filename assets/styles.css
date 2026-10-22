@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap');
+
+:root {
+    --navy: #132f3a;
+    --teal: #146b66;
+    --mint: #dce8d9;
+    --cream: #f6f2e9;
+    --gold: #e9bd6e;
+    --ink: #18343b
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+a:focus-visible {
+    outline: 3px solid #c57826;
+    outline-offset: 6px
+}
+
+.skip {
+    position: absolute;
+    left: 20px;
+    top: -80px;
+    background: white;
+    padding: 10px;
+    z-index: 9
+}
+
+.skip:focus {
+    top: 10px
+}
+
+header {
+    max-width: 1520px;
+    margin: auto;
+    padding: 29px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px
+}
+
+.wordmark {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    display: inline-block
+}
+
+.wordmark span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3.2px;
+    margin-top: 8px
+}
+
+nav {
+    display: flex;
+    gap: 34px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600
+}
+
+.nav-cta {
+    border: 1px solid #819594;
+    padding: 10px 18px
+}
+
+.nav-cta span {
+    margin-left: 20px
+}
+
+.hero {
+    max-width: 1520px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 640px
+}
+
+.hero-copy {
+    padding: 72px 9% 40px 10%
+}
+
+.eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.1px;
+    line-height: 1.6
+}
+
+.dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--teal);
+    margin-right: 8px
+}
+
+h1,
+h2,
+.vision h2 {
+    font-family: 'Libre Caslon Display', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -2px
+}
+
+h1 {
+    font-size: clamp(58px, 6.7vw, 104px);
+    margin: 30px 0 26px
+}
+
+em {
+    font-weight: 400;
+    color: var(--teal)
+}
+
+.intro {
+    max-width: 370px;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 32px
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: var(--teal);
+    color: white;
+    padding: 17px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background .2s
+}
+
+.button:hover {
+    background: #0c514d
+}
+
+.hero-note {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid #cdd2c7;
+    margin-top: 55px;
+    padding-top: 18px;
+    font-size: 10px
+}
+
+.hero-note span:first-child {
+    letter-spacing: 1.7px;
+    font-weight: 700
+}
+
+.hero-photo {
+    position: relative;
+    overflow: hidden;
+    background: var(--navy);
+    min-height: 580px
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 36% center;
+    position: absolute
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, #102b35d9);
+    color: white;
+    padding: 60px 30px 25px;
+    font-size: 11px;
+    letter-spacing: .5px
+}
+
+.ribbon {
+    background: var(--mint);
+    padding: 24px 5%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: center;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700
+}
+
+.ribbon span:nth-child(even) {
+    font-size: 24px;
+    color: var(--teal)
+}
+
+.section {
+    padding: 100px 6%;
+    max-width: 1440px;
+    margin: auto
+}
+
+.section-heading {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1fr;
+    gap: 35px;
+    align-items: start
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 60px
+}
+
+.section-heading>p:last-child {
+    font-size: 14px;
+    margin: 8px 0
+}
+
+.issues {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 65px;
+    border-top: 1px solid #adbab5
+}
+
+.issues article {
+    padding: 30px 35px 0 0
+}
+
+.issues article+article {
+    border-left: 1px solid #cbd2c9;
+    padding-left: 35px
+}
+
+.number {
+    font-size: 12px;
+    color: var(--teal)
+}
+
+h3 {
+    font-size: 23px;
+    line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: -.7px;
+    margin: 25px 0 18px
+}
+
+.issues p {
+    font-size: 14px;
+    max-width: 330px
+}
+
+.issue-tag {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    margin-top: 35px;
+    font-weight: 700
+}
+
+.story {
+    display: grid;
+    grid-template-columns: .9fr 1fr;
+    gap: 9%;
+    background: #e8ecdf;
+    max-width: none;
+    padding: 90px max(6%, calc((100vw - 1268px)/2))
+}
+
+.portrait {
+    align-self: start;
+    position: relative
+}
+
+.portrait img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 4/4.7;
+    object-fit: cover;
+    object-position: 50% 30%
+}
+
+.portrait span {
+    display: block;
+    background: var(--teal);
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1.7px;
+    padding: 17px
+}
+
+.story h2 {
+    font-size: 60px;
+    margin: 22px 0 30px
+}
+
+.story-copy p {
+    font-size: 14px
+}
+
+.story-copy .lead {
+    font-size: 18px;
+    line-height: 1.6
+}
+
+.story-copy .eyebrow {
+    font-size: 10px
+}
+
+.signature {
+    font-family: 'Libre Caslon Display', Georgia, serif;
+    font-style: italic;
+    font-size: 37px;
+    color: var(--teal);
+    margin-top: 25px
+}
+
+.vision {
+    padding: 85px 8%;
+    text-align: center;
+    background: var(--navy);
+    color: var(--cream)
+}
+
+.vision .eyebrow {
+    color: var(--gold)
+}
+
+.vision h2 {
+    font-size: clamp(38px, 4.7vw, 68px);
+    margin: 28px 0
+}
+
+.vision>p:not(.eyebrow) {
+    max-width: 580px;
+    margin: 0 auto 30px;
+    font-size: 15px;
+    color: #c9d6d3
+}
+
+.cream {
+    background: var(--cream);
+    color: var(--navy)
+}
+
+.cream:hover {
+    background: var(--mint)
+}
+
+footer {
+    padding: 40px 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center
+}
+
+footer p {
+    font-size: 11px;
+    margin: 5px 0
+}
+
+.fiction {
+    font-size: 9px;
+    color: #586c70
+}
+
+footer>a:last-child {
+    font-size: 11px
+}
+
+@media(min-width:1600px) {
+    .hero-photo {
+        min-height: 700px
+    }
+}
+
+@media(max-width:900px) {
+    header {
+        padding: 23px 5%
+    }
+
+    nav {
+        gap: 18px
+    }
+
+    .hero {
+        grid-template-columns: 1fr
+    }
+
+    .hero-copy {
+        padding: 45px 7%
+    }
+
+    h1 {
+        font-size: 85px
+    }
+
+    .hero-photo {
+        min-height: 500px
+    }
+
+    .hero-photo img {
+        object-position: center 35%
+    }
+
+    .hero-note {
+        margin-top: 35px
+    }
+
+    .section-heading {
+        grid-template-columns: 1fr 2fr
+    }
+
+    .section-heading>p:last-child {
+        grid-column: 2
+    }
+
+    .section-heading h2,
+    .story h2 {
+        font-size: 50px
+    }
+
+    .story {
+        gap: 6%;
+        padding: 65px 6%
+    }
+
+    .issues article {
+        padding-right: 20px
+    }
+
+    .issues article+article {
+        padding-left: 20px
+    }
+
+    footer {
+        flex-wrap: wrap
+    }
+}
+
+@media(max-width:600px) {
+    nav {
+        gap: 15px
+    }
+
+    nav a {
+        font-size: 11px
+    }
+
+    .nav-cta {
+        display: none
+    }
+
+    .wordmark {
+        font-size: 18px
+    }
+
+    .wordmark span {
+        font-size: 8px;
+        letter-spacing: 2.5px
+    }
+
+    h1 {
+        font-size: 67px
+    }
+
+    .hero-copy {
+        padding: 30px 6% 35px
+    }
+
+    .hero-photo {
+        min-height: 360px
+    }
+
+    .ribbon {
+        gap: 12px;
+        padding: 18px 5%;
+        font-size: 8px;
+        letter-spacing: 1px
+    }
+
+    .ribbon span:nth-child(even) {
+        font-size: 18px
+    }
+
+    .section {
+        padding: 60px 6%
+    }
+
+    .section-heading {
+        display: block
+    }
+
+    .section-heading h2 {
+        font-size: 48px;
+        margin: 25px 0
+    }
+
+    .issues {
+        grid-template-columns: 1fr;
+        margin-top: 30px
+    }
+
+    .issues article,
+    .issues article+article {
+        border-left: 0;
+        border-bottom: 1px solid #cbd2c9;
+        padding: 25px 0
+    }
+
+    .issues p {
+        max-width: none
+    }
+
+    .issues h3 {
+        margin-top: 14px
+    }
+
+    .issue-tag {
+        margin-top: 20px
+    }
+
+    .story {
+        display: flex;
+        flex-direction: column;
+        gap: 35px
+    }
+
+    .portrait img {
+        max-height: 480px
+    }
+
+    .story h2 {
+        font-size: 48px
+    }
+
+    .vision {
+        padding: 60px 6%
+    }
+
+    .vision h2 {
+        letter-spacing: -1px
+    }
+
+    footer {
+        align-items: flex-start
+    }
+
+    footer>div {
+        order: 3;
+        width: 100%
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto
+    }
+
+    * {
+        transition: none !important
+    }
+}
